@@ -6,9 +6,10 @@ Built with vanilla HTML, CSS & JavaScript — no frameworks, no dependencies.
 
 ## 🎯Features
 
-- Add / delete tasks
+- Add/delete tasks
 - Persists data with localStorage
 - Live unfinished task counter
+- Responsive
 - Persian/Arabic font support (IranCell)
 
 ## Run
