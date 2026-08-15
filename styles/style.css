@@ -3,66 +3,81 @@
   src: url("../fonts/irancell.ttf") format("truetype");
   unicode-range: U+0600-06FF; /* use this font just for Persian & Arabic language */
 }
+
 * {
   font-family: "irancell", Arial;
   box-sizing: border-box;
   margin: 0;
-} *::selection {
+}
+*::selection {
   background-color: rgb(0, 151, 0);
   color: white;
 }
+
 body {
   background: url(../Pics/background.png);
   min-height: 100vh;
 }
-body , main {
+
+body,
+main {
   min-width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
+
 .main-section {
   width: 24%;
   min-width: 340px;
-  border: 2px solid #00D947;
+  border: 2px solid #00d947;
   border-radius: 20px;
   padding: 50px 40px;
   padding-bottom: 20px;
   background-color: black;
+
+  margin: 50px 0;
 }
+
 .app-title h1 {
-  color : #00D947;
+  color: #00d947;
   margin-bottom: 15px;
   font-size: 30px;
 }
+
 .app-title p {
   color: rgba(121, 121, 121, 0.897);
   margin-bottom: 40px;
   font-size: 15px;
 }
+
 .add-task {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
+
 .add-task input {
   width: 80%;
   height: 40px;
   font-size: 17px;
-  background-color: #30302E;
+  background-color: #30302e;
   border: solid 1px #616161;
   border-radius: 7px;
   color: #fff;
   padding-left: 10px;
   transition: padding-left 0.5s;
   outline: none;
-} .add-task input:hover {
+}
+.add-task input:hover {
   padding-left: 20px;
-} .add-task input:focus {
+}
+.add-task input:focus {
   padding-left: 25px;
 }
+
 .add-task button {
   width: 100px;
   height: 40px;
@@ -71,32 +86,39 @@ body , main {
   cursor: pointer;
   font-size: 18px;
   padding: 4px 20px;
-  transition: background-color 0.2s, border-color 0.3s;
+  transition:
+    background-color 0.2s,
+    border-color 0.3s;
   background-color: rgb(19, 19, 19);
   border: solid 1px #616161;
   color: #fff;
   border-radius: 7px;
-} .add-task button:hover {
+}
+.add-task button:hover {
   background-color: rgb(41, 41, 41);
   border-color: rgb(15, 128, 15);
 }
+
 .dividing-line {
-  background-color: #1A1A1A;
+  background-color: #1a1a1a;
   height: 2px;
   width: 100%;
   margin-top: 25px;
   margin-bottom: 30px;
 }
+
 .app-tasks {
   display: flex;
   flex-direction: column;
 }
+
 ul {
   display: flex;
   flex-direction: column;
   padding: 0;
   gap: 8px;
 }
+
 li {
   text-decoration: none;
   color: #dbdbdbce;
@@ -113,12 +135,16 @@ li {
   padding-left: 16px;
   padding-right: 16px;
   transition: border-color 0.3s;
-} li:hover {
-  border-color: rgb(15, 128, 15);
+}
 
-} li:hover .trash-can-icon {
+li:hover {
+  border-color: rgb(15, 128, 15);
+}
+
+li:hover .trash-can-icon {
   display: block;
 }
+
 .trash-can-icon {
   display: none;
   margin-bottom: 1px;
@@ -129,18 +155,23 @@ li {
   color: #fff;
   border-radius: 7px;
   padding: 4px 15px;
-} .trash-can-icon:hover {
+}
+
+.trash-can-icon:hover {
   background-color: rgb(36, 36, 36);
 }
+
 .trash-can-icon img {
   width: 20px;
 }
+
 .no-task-err {
   text-align: center;
   color: gray;
   margin-top: 15px;
   margin-bottom: 15px;
 }
+
 .app-info {
   display: flex;
   align-items: center;
@@ -149,6 +180,7 @@ li {
   margin-top: 30px;
   margin-bottom: 15px;
 }
+
 .remove-all-btn {
   background-color: black;
   border: solid 2px #c42222;
@@ -159,15 +191,20 @@ li {
   cursor: pointer;
   transition: box-shadow 0.3s;
   outline: none;
-} .remove-all-btn:hover {
-  box-shadow: 0px 0px 10px #ff2929,
-  inset 0px 0px 10px #ff2929;
 }
+
+.remove-all-btn:hover {
+  box-shadow:
+    0px 0px 10px #ff2929,
+    inset 0px 0px 10px #ff2929;
+}
+
 .app-info-txt {
   color: gray;
   font-size: 17px;
 }
+
 #pendingTasks {
   font-weight: bold;
-  color: #00D947;
+  color: #00d947;
 }
