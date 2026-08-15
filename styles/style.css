@@ -30,7 +30,8 @@ main {
 
 .main-section {
   width: 24%;
-  min-width: 340px;
+  min-width: 440px;
+  max-width: 540px;
   border: 2px solid #00d947;
   border-radius: 20px;
   padding: 50px 40px;
@@ -38,6 +39,10 @@ main {
   background-color: black;
 
   margin: 50px 0;
+}
+
+.app-title {
+  margin-bottom: 40px;
 }
 
 .app-title h1 {
@@ -48,7 +53,6 @@ main {
 
 .app-title p {
   color: rgba(121, 121, 121, 0.897);
-  margin-bottom: 40px;
   font-size: 15px;
 }
 
@@ -60,8 +64,8 @@ main {
 }
 
 .add-task input {
-  width: 80%;
   height: 40px;
+  width: 72%;
   font-size: 17px;
   background-color: #30302e;
   border: solid 1px #616161;
@@ -79,7 +83,7 @@ main {
 }
 
 .add-task button {
-  width: 100px;
+  width: 28%;
   height: 40px;
   outline: none;
   margin-left: 10px;
@@ -94,6 +98,7 @@ main {
   color: #fff;
   border-radius: 7px;
 }
+
 .add-task button:hover {
   background-color: rgb(41, 41, 41);
   border-color: rgb(15, 128, 15);
@@ -103,8 +108,7 @@ main {
   background-color: #1a1a1a;
   height: 2px;
   width: 100%;
-  margin-top: 25px;
-  margin-bottom: 30px;
+  margin: 25px 0;
 }
 
 .app-tasks {
@@ -112,14 +116,14 @@ main {
   flex-direction: column;
 }
 
-ul {
+.app-tasks ul {
   display: flex;
   flex-direction: column;
   padding: 0;
   gap: 8px;
 }
 
-li {
+.app-tasks ul li {
   text-decoration: none;
   color: #dbdbdbce;
   display: flex;
@@ -132,16 +136,13 @@ li {
   background-color: #161616;
   font-size: 20px;
   border-radius: 10px;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding: 0 16px;
   transition: border-color 0.3s;
 }
-
-li:hover {
+.app-tasks ul li:hover {
   border-color: rgb(15, 128, 15);
 }
-
-li:hover .trash-can-icon {
+.app-tasks ul li:hover .trash-can-icon {
   display: block;
 }
 
@@ -177,8 +178,17 @@ li:hover .trash-can-icon {
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  margin-top: 30px;
-  margin-bottom: 15px;
+  width: 100%;
+}
+
+.app-info-txt {
+  color: gray;
+  font-size: 17px;
+}
+
+.app-info-txt span {
+  font-weight: bold;
+  color: #00d947;
 }
 
 .remove-all-btn {
@@ -192,19 +202,136 @@ li:hover .trash-can-icon {
   transition: box-shadow 0.3s;
   outline: none;
 }
-
 .remove-all-btn:hover {
   box-shadow:
     0px 0px 10px #ff2929,
     inset 0px 0px 10px #ff2929;
 }
 
-.app-info-txt {
-  color: gray;
-  font-size: 17px;
+@media screen and (max-width: 768px) {
+  .main-section {
+    width: 60%;
+    min-width: 370px;
+    max-width: 440px;
+    padding: 45px 35px;
+  }
+
+  .app-title {
+    margin-bottom: 30px;
+  }
+
+  .app-title h1 {
+    font-size: 25px;
+  }
+
+  .app-title p {
+    font-size: 13px;
+  }
+
+  .add-task input {
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .add-task button {
+    height: 35px;
+    margin-left: 8px;
+    font-size: 14px;
+  }
+
+  .app-tasks ul li {
+    height: 36px;
+    font-size: 16px;
+    padding: 0 12px;
+  }
+
+  .trash-can-icon {
+    padding: 2px 10px;
+  }
+
+  .trash-can-icon img {
+    width: 15px;
+  }
+
+  .dividing-line {
+    margin: 20px 0;
+  }
+
+  .app-info-txt {
+    font-size: 14px;
+  }
+
+  .remove-all-btn {
+    font-size: 14px;
+    padding: 4px 8px;
+  }
+
+  .no-task-err {
+    font-size: 14px;
+  }
 }
 
-#pendingTasks {
-  font-weight: bold;
-  color: #00d947;
+@media screen and (max-width: 425px) {
+  .main-section {
+    width: 40%;
+    min-width: 290px;
+    max-width: 400px;
+    padding: 38px 28px;
+  }
+
+  .app-title {
+    margin-bottom: 24px;
+  }
+
+  .app-title h1 {
+    font-size: 22px;
+  }
+
+  .app-title p {
+    font-size: 12px;
+  }
+
+  .add-task input {
+    height: 26px;
+    font-size: 11px;
+    width: 69%;
+  }
+
+  .add-task button {
+    width: 31%;
+    height: 26px;
+    margin-left: 5px;
+    font-size: 11px;
+  }
+
+  .app-tasks ul li {
+    height: 30px;
+    font-size: 12px;
+    padding: 0 9px;
+  }
+
+  .trash-can-icon {
+    padding: 2px 8px;
+  }
+
+  .trash-can-icon img {
+    width: 11px;
+  }
+
+  .dividing-line {
+    margin: 10px 0;
+  }
+
+  .app-info-txt {
+    font-size: 11px;
+  }
+
+  .remove-all-btn {
+    font-size: 11px;
+    padding: 2px 6px;
+  }
+
+  .no-task-err {
+    font-size: 11px;
+  }
 }
