@@ -33,12 +33,43 @@
   --color-delete-add-bg-hover: rgb(41, 41, 41);
 }
 
+:root {
+  /* black / white */
+  --color-white: #fff;
+  --color-black: #000;
+
+  /* Green */
+  --color-primary: #00d947;
+  --color-primary-hover: rgb(15, 128, 15);
+
+  /* Red / Remove all btn */
+  --color-danger: #c42222;
+  --color-danger-hover: #ff2929;
+
+  /* General */
+  --color-divider: #1a1a1a;
+
+  /* Gray */
+  --color-primary-gray: gray;
+  --color-border: #616161;
+  --color-item-bg: #161616;
+  --color-input-bg: #30302e;
+  --color-item-border: #424242;
+  --color-item-text: #dbdbdbce;
+
+  /* Delete button */
+  --color-delete-add-bg: rgb(19, 19, 19);
+  --color-delete-add-bg-hover: rgb(41, 41, 41);
+}
+
 * {
   font-family: "irancell", Arial;
   box-sizing: border-box;
   margin: 0;
 }
 *::selection {
+  background-color: var(--color-primary-hover);
+  color: var(--color-white);
   background-color: var(--color-primary-hover);
   color: var(--color-white);
 }
@@ -62,9 +93,11 @@ main {
   min-width: 440px;
   max-width: 540px;
   border: 2px solid var(--color-primary);
+  border: 2px solid var(--color-primary);
   border-radius: 20px;
   padding: 50px 40px;
   padding-bottom: 20px;
+  background-color: var(--color-black);
   background-color: var(--color-black);
   margin: 50px 0;
 }
@@ -75,11 +108,13 @@ main {
 
 .app-title h1 {
   color: var(--color-primary);
+  color: var(--color-primary);
   margin-bottom: 15px;
   font-size: 30px;
 }
 
 .app-title p {
+  color: var(--color-primary-gray);
   color: var(--color-primary-gray);
   font-size: 15px;
 }
@@ -97,7 +132,10 @@ main {
   font-size: 17px;
   background-color: var(--color-input-bg);
   border: solid 1px var(--color-border);
+  background-color: var(--color-input-bg);
+  border: solid 1px var(--color-border);
   border-radius: 7px;
+  color: var(--color-white);
   color: var(--color-white);
   padding-left: 10px;
   transition: padding-left 0.5s;
@@ -124,14 +162,20 @@ main {
   background-color: var(--color-delete-add-bg);
   border: solid 1px var(--color-border);
   color: var(--color-white);
+  background-color: var(--color-delete-add-bg);
+  border: solid 1px var(--color-border);
+  color: var(--color-white);
   border-radius: 7px;
 }
 .add-task button:hover {
   background-color: var(--color-delete-add-bg-hover);
   border-color: var(--color-primary-hover);
+  background-color: var(--color-delete-add-bg-hover);
+  border-color: var(--color-primary-hover);
 }
 
 .dividing-line {
+  background-color: var(--color-divider);
   background-color: var(--color-divider);
   height: 2px;
   width: 100%;
@@ -153,6 +197,7 @@ main {
 .app-tasks ul li {
   text-decoration: none;
   color: var(--color-item-text);
+  color: var(--color-item-text);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -161,12 +206,15 @@ main {
   height: 50px;
   border: solid 1px var(--color-item-border);
   background-color: var(--color-item-bg);
+  border: solid 1px var(--color-item-border);
+  background-color: var(--color-item-bg);
   font-size: 20px;
   border-radius: 10px;
   padding: 0 16px;
   transition: border-color 0.3s;
 }
 .app-tasks ul li:hover {
+  border-color: var(--color-primary-hover);
   border-color: var(--color-primary-hover);
 }
 .app-tasks ul li:hover .trash-can-btn {
@@ -178,6 +226,9 @@ main {
   margin-bottom: 1px;
   cursor: pointer;
   transition: background-color 0.3s;
+  background-color: var(--color-delete-add-bg);
+  border: solid 1px var(--color-border);
+  color: var(--color-white);
   background-color: var(--color-delete-add-bg);
   border: solid 1px var(--color-border);
   color: var(--color-white);
@@ -196,6 +247,7 @@ main {
 .no-task-err {
   text-align: center;
   color: var(--color-primary-gray);
+  color: var(--color-primary-gray);
   margin-top: 15px;
   margin-bottom: 15px;
 }
@@ -210,18 +262,23 @@ main {
 
 .app-info-txt {
   color: var(--color-primary-gray);
+  color: var(--color-primary-gray);
   font-size: 17px;
 }
 
 .app-info-txt span {
   font-weight: bold;
   color: var(--color-primary);
+  color: var(--color-primary);
 }
 
 .remove-all-btn {
   background-color: var(--color-black);
   border: solid 2px var(--color-danger);
+  background-color: var(--color-black);
+  border: solid 2px var(--color-danger);
   border-radius: 7px;
+  color: var(--color-danger);
   color: var(--color-danger);
   font-size: 16px;
   padding: 6px 14px;
@@ -231,6 +288,8 @@ main {
 }
 .remove-all-btn:hover {
   box-shadow:
+    0px 0px 10px var(--color-danger-hover),
+    inset 0px 0px 10px var(--color-danger-hover);
     0px 0px 10px var(--color-danger-hover),
     inset 0px 0px 10px var(--color-danger-hover);
 }
