@@ -11,6 +11,7 @@ Built with vanilla HTML, CSS & JavaScript — no frameworks, no dependencies.
 - Live unfinished task counter
 - Responsive
 - Persian/Arabic font support (IranCell)
+- using CSS variables
 
 ## Run
 
