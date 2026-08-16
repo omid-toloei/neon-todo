@@ -33,7 +33,7 @@ function showTasks() {
 
   let newTag = "";
   listArray.forEach((element, index) => {
-    newTag += `<li>${element}<button class="trash-can-icon" onclick="deleteThisTask(${index})"><img src="Pics/trash-can-icon.PNG"></button></li>`;
+    newTag += `<li>${element}<button class="trash-can-btn" onclick="deleteThisTask(${index})"><img src="Pics/trash-can-icon.PNG"></button></li>`;
   });
   toDoList.innerHTML = newTag;
 

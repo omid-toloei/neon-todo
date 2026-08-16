@@ -169,11 +169,11 @@ main {
 .app-tasks ul li:hover {
   border-color: var(--color-primary-hover);
 }
-.app-tasks ul li:hover .trash-can-icon {
+.app-tasks ul li:hover .trash-can-btn {
   display: block;
 }
 
-.trash-can-icon {
+.trash-can-btn {
   display: none;
   margin-bottom: 1px;
   cursor: pointer;
@@ -185,11 +185,11 @@ main {
   padding: 4px 15px;
 }
 
-.trash-can-icon:hover {
+.trash-can-btn:hover {
   background-color: var(--color-delete-add-bg-hover);
 }
 
-.trash-can-icon img {
+.trash-can-btn img {
   width: 20px;
 }
 
@@ -272,11 +272,11 @@ main {
     padding: 0 12px;
   }
 
-  .trash-can-icon {
+  .trash-can-btn {
     padding: 2px 10px;
   }
 
-  .trash-can-icon img {
+  .trash-can-btn img {
     width: 15px;
   }
 
@@ -337,11 +337,11 @@ main {
     padding: 0 9px;
   }
 
-  .trash-can-icon {
+  .trash-can-btn {
     padding: 2px 8px;
   }
 
-  .trash-can-icon img {
+  .trash-can-btn img {
     width: 11px;
   }
 
